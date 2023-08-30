@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            administration
+        </title>
+        <style>
+            input{
+                display: block;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>
+                administration Log In
+            </h1>
+            <hr>
+        </header>
+        <main>
+            <form action="" method="post">
+                {% csrf_token %}
+                <input placeholder="password" type="password" name="password">
+                <input placeholder="username" type="text" name="username">
+                <input type="submit">
+            </form>
+        </main>
+        <footer>
+            <hr>
+            <h5>
+                Contact Us with 09029633500
+            </h5>
+            <h5>
+                all terms are in order
+            </h5>
+            <h5>
+                Contact In Email with kian102120@gmail.com
+            </h5>
+            <p>
+                {% for item in all %}
+                {{ item.username }} <hr>
+                {% endfor %}
+            </p>
+        </footer>
+    </body>
+</html>
